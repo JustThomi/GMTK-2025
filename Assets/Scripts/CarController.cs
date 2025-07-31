@@ -30,6 +30,8 @@ public class CarController : MonoBehaviour
     private void Start()
     {
         startModelOffset = carModel.transform.localPosition;
+        GameManager.instance.cars.Add(this);
+        //transform.position = GameManager.instance.spawnPoints[GameManager.instance.cars.Count - 1].position;
     }
 
     private void Update()
@@ -41,10 +43,6 @@ public class CarController : MonoBehaviour
         curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
 
         carModel.position = transform.position + startModelOffset;
-
-        //curYRot += turnInput * turnSpeed * Time.deltaTime;
-
-        //carModel.eulerAngles = new Vector3(0, curYRot, 0);
 
         CheckGround();
 
