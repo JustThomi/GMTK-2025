@@ -20,9 +20,8 @@ public class CarController : MonoBehaviour
     private bool accelerateInput;
     private float turnInput;
 
-   // public TrackZone curTrackZone;
+    public TrackZone curTrackZone;
     public int zonesPassed;
-
     public int racePosition;
     public int curLap;
 
