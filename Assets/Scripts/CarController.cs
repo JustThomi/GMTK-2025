@@ -44,6 +44,8 @@ public class CarController : MonoBehaviour
     private void Start()
     {
         startModelOffset = carModel.transform.localPosition;
+        GameManager.instance.cars.Add(this);
+        rig.position = GameManager.instance.spawnPoints[GameManager.instance.cars.Count - 1].position;
 
         waypoints = GameObject.FindGameObjectWithTag("Path").GetComponent<TrackWaypoints>();
         nodes = waypoints.nodes;
@@ -51,6 +53,9 @@ public class CarController : MonoBehaviour
 
     private void Update()
     {
+        if (!canControl)
+            turnInput = 0.0f;
+            
         switch (driverController)
         {
             case DriverType.AI:
@@ -63,17 +68,18 @@ public class CarController : MonoBehaviour
 
         carModel.position = transform.position + startModelOffset;
 
-        //curYRot += turnInput * turnSpeed * Time.deltaTime;
-
-        //carModel.eulerAngles = new Vector3(0, curYRot, 0);
-
         CheckGround();
 
     }
 
     private void FixedUpdate()
     {
-        CalculateDistanceOfWaypoints();
+        if(!canControl)
+            return;
+        
+        if (accelerateInput == true)
+        
+       CalculateDistanceOfWaypoints();
 
         switch (driverController)
         {
