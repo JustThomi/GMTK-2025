@@ -7,7 +7,7 @@ public class TrackWaypoints : MonoBehaviour
     [Range(0f, 2f)] public float sphereRadius;
     public List<Transform> nodes = new List<Transform>();
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = lineColor;
 

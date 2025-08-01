@@ -2,16 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
     public TextMeshProUGUI carPositionText;
-    public CarController car;
+    public TextMeshProUGUI lapText;
     public TextMeshProUGUI countdownText;
+    public TextMeshProUGUI levelText;
+    public CarController car;
+    public PlayerLevelManager lvlManager;
+    public Slider expSlider;
 
     void Update()
     {
         carPositionText.text = car.racePosition.ToString() + " / " + GameManager.instance.cars.Count.ToString();
+        lapText.text = "Lap: " + car.curLap.ToString() + " / " + GameManager.instance.lapsToFinish.ToString();
+        expSlider.maxValue = lvlManager.xpToLevelUp;
+        expSlider.value = lvlManager.currentXp;
+        levelText.text = "Level: " + lvlManager.currentLevel.ToString();
     }
 
     public void StartCountdownDisplay()

@@ -18,6 +18,7 @@ public class CarController : MonoBehaviour
     public Transform currentWaypoint;
     [Range(0, 6)] public int distanceOffset;
     [Range(0, 15)] public float steerForce;
+    public float waypointCheckDistance;
 
     public float acceleration;
     public float turnSpeed;
@@ -41,6 +42,8 @@ public class CarController : MonoBehaviour
 
     public Rigidbody rig;
 
+    private int currentWaypointIndex = 0;
+
     private void Start()
     {
         startModelOffset = carModel.transform.localPosition;
@@ -55,7 +58,9 @@ public class CarController : MonoBehaviour
     {
         if (!canControl)
             turnInput = 0.0f;
-            
+
+        CalculateDistanceOfWaypoints();
+
         switch (driverController)
         {
             case DriverType.AI:
@@ -69,7 +74,6 @@ public class CarController : MonoBehaviour
         carModel.position = transform.position + startModelOffset;
 
         CheckGround();
-
     }
 
     private void FixedUpdate()
@@ -130,15 +134,15 @@ public class CarController : MonoBehaviour
 
     private void AISteer()
     {
-        Vector3 relative = transform.InverseTransformPoint(currentWaypoint.transform.position);
+        Vector3 localTarget = transform.InverseTransformPoint(currentWaypoint.position);
 
-        relative /= relative.magnitude;
+        localTarget /= localTarget.magnitude;
 
-        float turnRate = Vector3.Dot(rig.linearVelocity.normalized, carModel.forward);
+        float desiredTurn = localTarget.x;
 
-        turnRate = Mathf.Abs(turnRate);
+        turnInput = Mathf.Lerp(turnInput, desiredTurn, Time.deltaTime * 5f);
 
-        turnInput = relative.x;
+        float turnRate = Mathf.Abs(Vector3.Dot(rig.linearVelocity.normalized, carModel.forward));
 
         curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
     }
@@ -162,21 +166,16 @@ public class CarController : MonoBehaviour
 
     private void CalculateDistanceOfWaypoints()
     {
-        Vector3 position = gameObject.transform.position;
-        float distance = Mathf.Infinity;
+        if (nodes.Count == 0) return;
 
-        for(int i = 0; i < nodes.Count; i++)
+        float distanceToWaypoint = Vector3.Distance(transform.position, nodes[currentWaypointIndex].position);
+        if (distanceToWaypoint < waypointCheckDistance)
         {
-            Vector3 difference = nodes[i].position - position;
-            float currentDistance = difference.magnitude;
-
-            if(currentDistance < distance)
-            {
-                int targetIndex = (i + distanceOffset) % nodes.Count;
-                currentWaypoint = nodes[targetIndex];
-                distance = currentDistance;
-            }
+            currentWaypointIndex = (currentWaypointIndex + 1) % nodes.Count;
         }
+
+        int targetIndex = (currentWaypointIndex + distanceOffset) % nodes.Count;
+        currentWaypoint = nodes[targetIndex];
     }
 
     private void OnDrawGizmosSelected()

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 
     public List<CarController> cars = new List<CarController>();
     public Transform[] spawnPoints;
+    public float lapsToFinish;
 
     public float positionUpdateRate = 0.05f;
     private float lastPositionUpdateTime;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     private void StartCountdown()
     {
-        PlayerUI[] uis = FindObjectsOfType<PlayerUI>();
+        PlayerUI[] uis = FindObjectsByType<PlayerUI>(FindObjectsSortMode.None);
 
         for (int x = 0; x < uis.Length; ++x)
             uis[x].StartCountdownDisplay();
