@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class CarController : MonoBehaviour
@@ -35,6 +36,7 @@ public class CarController : MonoBehaviour
     private bool accelerateInput;
     private float turnInput;
 
+    public TrackZone[] trackZones;
     public TrackZone curTrackZone;
     public int zonesPassed;
     public int racePosition;
@@ -52,6 +54,11 @@ public class CarController : MonoBehaviour
 
         waypoints = GameObject.FindGameObjectWithTag("Path").GetComponent<TrackWaypoints>();
         nodes = waypoints.nodes;
+
+        GameObject parentObject = GameObject.FindGameObjectWithTag("TrackZone");
+        trackZones = parentObject.GetComponentsInChildren<TrackZone>()
+            .OrderBy(tz => tz.transform.GetSiblingIndex())
+            .ToArray();
     }
 
     private void Update()

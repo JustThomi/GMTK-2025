@@ -13,8 +13,9 @@ public class TrackZone : MonoBehaviour
             CarController car = other.GetComponent<CarController>();
             car.curTrackZone = this;
             car.zonesPassed++;
-            if (isGate)
+            if (isGate && (car.zonesPassed == car.trackZones.Length + 1 || car.curLap == 0))
             {
+                car.zonesPassed = 1;
                 car.curLap++;
                 PlayerLevelManager lvl = other.GetComponent<PlayerLevelManager>();
                 lvl.AddXp(xpToAdd);

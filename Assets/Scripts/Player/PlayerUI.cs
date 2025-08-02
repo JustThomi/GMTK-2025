@@ -17,7 +17,9 @@ public class PlayerUI : MonoBehaviour
     void Update()
     {
         carPositionText.text = car.racePosition.ToString() + " / " + GameManager.instance.cars.Count.ToString();
-        lapText.text = "Lap: " + car.curLap.ToString() + " / " + GameManager.instance.lapsToFinish.ToString();
+        lapText.text = (car.curLap == 0)
+             ? "Lap: " + (car.curLap + 1).ToString() + " / " + GameManager.instance.lapsToFinish.ToString()
+             : "Lap: " + car.curLap.ToString() + " / " + GameManager.instance.lapsToFinish.ToString();
         expSlider.maxValue = lvlManager.xpToLevelUp;
         expSlider.value = lvlManager.currentXp;
         levelText.text = "Level: " + lvlManager.currentLevel.ToString();

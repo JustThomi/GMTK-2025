@@ -1102,6 +1102,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212d9e976d642c44f9e0821894df95cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UICanvas: {fileID: 8112511478946189752}
+  referenceCamera: {fileID: 8180000261639970813}
+  textFontSize: 55
+  font: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  textColor: {r: 0.7924528, g: 0.14702736, b: 0.14702736, a: 1}
+  xNumberOffset: 100
+  yNumberOffset: -100
   currentLevel: 1
   currentXp: 0
   xpToLevelUp: 100

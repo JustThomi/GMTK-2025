@@ -69,9 +69,13 @@ public class GameManager : MonoBehaviour
 
     int SortPosition (CarController a, CarController b)
     {
-        if(a.zonesPassed > b.zonesPassed)
+        if (a.curLap > b.curLap)
             return 1;
-        else if(b.zonesPassed > a.zonesPassed)
+        else if(b.curLap > a.curLap)
+            return -1;
+        else if (a.zonesPassed > b.zonesPassed)
+            return 1;
+        else if (b.zonesPassed > a.zonesPassed)
             return -1;
 
         float aDist = Vector3.Distance(a.transform.position, a.curTrackZone.transform.position);

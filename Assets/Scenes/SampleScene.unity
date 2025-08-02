@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 77523828}
   m_Layer: 0
   m_Name: _TrackZones
-  m_TagString: Untagged
+  m_TagString: TrackZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7416,7 +7416,7 @@ MonoBehaviour:
   lapsToFinish: 35
   positionUpdateRate: 0.05
   gameStarted: 0
-  playersToBegin: 1
+  playersToBegin: 2
 --- !u!1001 &1803250240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8464,7 +8464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7160839672813676571, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7281425798435393181, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8508,7 +8508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8890297245149137187, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
