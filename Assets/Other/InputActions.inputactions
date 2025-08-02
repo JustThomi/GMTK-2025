@@ -193,7 +193,7 @@
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Keyboard",
                     "action": "UseAbility",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -204,7 +204,7 @@
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Controller",
                     "action": "UseAbility",
                     "isComposite": false,
                     "isPartOfComposite": false

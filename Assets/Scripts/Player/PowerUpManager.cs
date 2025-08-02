@@ -26,10 +26,11 @@ public class PowerUpManager : MonoBehaviour{
     }
 
     public void SpawnPowerUps(){
-        int offset = 20;
+        int offset = 4;
         PowerUp powerUpMid = Instantiate(powerUpPrefab, carTransform.position + (carTransform.forward * offset), transform.rotation); // magic numbers :D
         powerUpMid.carID = carCollider.GetInstanceID();
         powerUpMid.type = allAbilities[Random.Range(0,allAbilities.Length)];
+        Debug.Log("Spawned");
     }
 
     public void jump(){
@@ -47,6 +48,7 @@ public class PowerUpManager : MonoBehaviour{
     }
     
     public void OnAbilityInput(InputAction.CallbackContext context){
+        Debug.Log("current ability: " + currentAbility);
         if (context.started){
             switch (currentAbility){
                 case "jump":
