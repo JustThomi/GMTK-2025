@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.InputSystem;
 public class CarController : MonoBehaviour
 {
@@ -17,11 +18,12 @@ public class CarController : MonoBehaviour
     public TrackWaypoints waypoints;
     public List<Transform> nodes = new List<Transform>();
     public Transform currentWaypoint;
-    [Range(0, 6)] public int distanceOffset;
+    [Range(0, 6)] private int distanceOffset;
     [Range(0, 15)] public float steerForce;
     public float waypointCheckDistance;
 
     public float acceleration;
+    public float reverse;
     public float turnSpeed;
 
     public Transform carModel;
@@ -34,6 +36,7 @@ public class CarController : MonoBehaviour
     public bool canControl;
 
     private bool accelerateInput;
+    private bool reverseInput;
     private float turnInput;
 
     public TrackZone[] trackZones;
@@ -43,14 +46,21 @@ public class CarController : MonoBehaviour
     public int curLap;
 
     public Rigidbody rig;
+    private NavMeshAgent agent;
 
-    private int currentWaypointIndex = 0;
+    public List<Transform> raceCheckpoints = new List<Transform>();
+
+    private int currentTargetIndex = 0;
 
     private void Start()
     {
         startModelOffset = carModel.transform.localPosition;
         GameManager.instance.cars.Add(this);
         rig.position = GameManager.instance.spawnPoints[GameManager.instance.cars.Count - 1].position;
+
+        agent = GetComponent<NavMeshAgent>();
+        agent.updatePosition = false;
+        agent.updateRotation = false;
 
         waypoints = GameObject.FindGameObjectWithTag("Path").GetComponent<TrackWaypoints>();
         nodes = waypoints.nodes;
@@ -59,66 +69,87 @@ public class CarController : MonoBehaviour
         trackZones = parentObject.GetComponentsInChildren<TrackZone>()
             .OrderBy(tz => tz.transform.GetSiblingIndex())
             .ToArray();
+
+        if (driverController == DriverType.AI && nodes.Count > 0)
+        {
+            currentTargetIndex = 0;
+            agent.SetDestination(nodes[currentTargetIndex].position);
+        }
     }
 
     private void Update()
     {
+        if (agent != null)
+            agent.enabled = canControl;
+
         if (!canControl)
             turnInput = 0.0f;
-
-        CalculateDistanceOfWaypoints();
 
         switch (driverController)
         {
             case DriverType.AI:
-                AISteer();
+                // AISteer();
                 break;
             case DriverType.Player:
                 PlayerSteer();
                 break;
         }
 
-        carModel.position = transform.position + startModelOffset;
-
         CheckGround();
     }
-
     private void FixedUpdate()
     {
-        if(!canControl)
+        if (!canControl)
             return;
-        
-        if (accelerateInput == true)
-        
-       CalculateDistanceOfWaypoints();
 
-        switch (driverController)
+        if (driverController == DriverType.AI)
         {
-            case DriverType.AI:
-                AIDrive();
-                break;
-            case DriverType.Player:
-                PlayerDrive();
-                break;
+            UpdateDestinationIfNeeded();
+
+            Vector3 desiredVelocity = agent.desiredVelocity;
+
+            desiredVelocity.y = rig.linearVelocity.y;
+
+            rig.linearVelocity = Vector3.Lerp(rig.linearVelocity, desiredVelocity, Time.fixedDeltaTime * 5f);
+
+            Vector3 horizontalVelocity = rig.linearVelocity;
+            horizontalVelocity.y = 0;
+
+            if (horizontalVelocity.sqrMagnitude > 0.01f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(horizontalVelocity.normalized);
+                rig.MoveRotation(Quaternion.Slerp(rig.rotation, targetRotation, turnSpeed * Time.fixedDeltaTime));
+            }
+
+            agent.nextPosition = rig.position;
+        }
+        else if (driverController == DriverType.Player)
+        {
+            PlayerDrive();
         }
     }
 
     void CheckGround()
     {
-        Ray ray = new Ray(transform.position + new Vector3(0, -0.75f, 0), Vector3.down);
+        Ray ray = new Ray(transform.position + Vector3.up * 0.5f, Vector3.down);
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, 1.0f))
+
+        if (Physics.Raycast(ray, out hit, 1.5f))
         {
-            carModel.up = hit.normal;
+            carModel.up = Vector3.Lerp(carModel.up, hit.normal, 10f * Time.deltaTime);
         }
         else
         {
-            carModel.up = Vector3.up;
+            carModel.up = Vector3.Lerp(carModel.up, Vector3.up, 10f * Time.deltaTime);
         }
 
-        carModel.Rotate(new Vector3(0, curYRot, 0), Space.Self);
+        Vector3 forwardOnPlane = Vector3.ProjectOnPlane(rig.transform.forward, carModel.up).normalized;
+        if (forwardOnPlane.sqrMagnitude > 0.001f)
+        {
+            carModel.rotation = Quaternion.LookRotation(forwardOnPlane, carModel.up);
+        }
     }
-    
+
     // called when we press down the accelerate input
     public void OnAccelerateInput(InputAction.CallbackContext context)
     {
@@ -134,24 +165,58 @@ public class CarController : MonoBehaviour
         turnInput = context.ReadValue<float>();
     }
 
-    private void AIDrive()
+    public void OnReverseInput(InputAction.CallbackContext context)
     {
-        rig.AddForce(carModel.forward * acceleration, ForceMode.Acceleration);
+        if (context.phase == InputActionPhase.Performed)
+            reverseInput = true;
+        else
+            reverseInput = false;
     }
 
-    private void AISteer()
+    //private void AIDrive()
+    //{
+    //    rig.AddForce(carModel.forward * acceleration, ForceMode.Acceleration);
+    //    UpdateDestinationIfNeeded();
+    //}
+
+    //private void AISteer()
+    //{
+    //    if (agent.path == null || agent.path.corners.Length < 2) return;
+
+    //    Vector3 nextCorner = agent.path.corners[1];
+    //    Vector3 localTarget = transform.InverseTransformPoint(nextCorner);
+
+    //    if (localTarget.z < 0)
+    //    {
+    //        turnInput = 0f;
+    //        return;
+    //    }
+
+    //    localTarget.Normalize();
+
+    //    float desiredTurn = localTarget.x;
+    //    if (Mathf.Abs(desiredTurn) < 0.07f)
+    //        desiredTurn = 0f;
+
+    //    turnInput = Mathf.MoveTowards(turnInput, desiredTurn, Time.deltaTime * steerForce);
+
+    //    float turnRate = Mathf.Abs(Vector3.Dot(rig.linearVelocity.normalized, carModel.forward));
+    //    curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
+    //}
+
+    private void UpdateDestinationIfNeeded()
     {
-        Vector3 localTarget = transform.InverseTransformPoint(currentWaypoint.position);
+        if (nodes.Count == 0) return;
 
-        localTarget /= localTarget.magnitude;
+        float dist = Vector3.Distance(transform.position, agent.destination);
 
-        float desiredTurn = localTarget.x;
+        if (dist < waypointCheckDistance)
+        {
+            currentTargetIndex = (currentTargetIndex + 1) % nodes.Count;
+            agent.SetDestination(nodes[currentTargetIndex].position);
+        }
 
-        turnInput = Mathf.Lerp(turnInput, desiredTurn, Time.deltaTime * 5f);
-
-        float turnRate = Mathf.Abs(Vector3.Dot(rig.linearVelocity.normalized, carModel.forward));
-
-        curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
+        currentWaypoint = nodes[currentTargetIndex];
     }
 
     private void PlayerDrive()
@@ -159,6 +224,10 @@ public class CarController : MonoBehaviour
         if (accelerateInput == true)
         {
             rig.AddForce(carModel.forward * acceleration, ForceMode.Acceleration);
+        }
+        else if(reverseInput == true)
+        {
+            rig.AddForce(carModel.forward * -reverse, ForceMode.Acceleration);
         }
     }
 
@@ -171,19 +240,19 @@ public class CarController : MonoBehaviour
         curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
     }
 
-    private void CalculateDistanceOfWaypoints()
-    {
-        if (nodes.Count == 0) return;
+    //private void CalculateDistanceOfWaypoints()
+    //{
+    //    if (nodes.Count == 0) return;
 
-        float distanceToWaypoint = Vector3.Distance(transform.position, nodes[currentWaypointIndex].position);
-        if (distanceToWaypoint < waypointCheckDistance)
-        {
-            currentWaypointIndex = (currentWaypointIndex + 1) % nodes.Count;
-        }
+    //    float distanceToWaypoint = Vector3.Distance(transform.position, nodes[currentWaypointIndex].position);
+    //    if (distanceToWaypoint < waypointCheckDistance)
+    //    {
+    //        currentWaypointIndex = (currentWaypointIndex + 1) % nodes.Count;
+    //    }
 
-        int targetIndex = (currentWaypointIndex + distanceOffset) % nodes.Count;
-        currentWaypoint = nodes[targetIndex];
-    }
+    //    int targetIndex = (currentWaypointIndex + distanceOffset) % nodes.Count;
+    //    currentWaypoint = nodes[targetIndex];
+    //}
 
     private void OnDrawGizmosSelected()
     {

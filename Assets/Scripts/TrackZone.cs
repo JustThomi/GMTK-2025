@@ -13,7 +13,11 @@ public class TrackZone : MonoBehaviour
             CarController car = other.GetComponent<CarController>();
             car.curTrackZone = this;
             car.zonesPassed++;
-            if (isGate && (car.zonesPassed == car.trackZones.Length + 1 || car.curLap == 0))
+
+            if(car.curLap == 0)
+                car.curLap++;
+
+            if (isGate && car.zonesPassed == car.trackZones.Length + 1)
             {
                 car.zonesPassed = 1;
                 car.curLap++;
