@@ -1,10 +1,12 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerLevelManager : MonoBehaviour
 {
     private CarController cc;
+    public UnityEvent hasLeveledUp;
 
     [Header("XP Floating Numbers")]
     public Canvas UICanvas;
@@ -53,6 +55,7 @@ public class PlayerLevelManager : MonoBehaviour
         Debug.Log("Yeppy");
         currentLevel++;
         cc.acceleration += 10;
+        hasLeveledUp.Invoke();
     }
 
     public void GenerateFloatingText(string text, Transform target, float duration = 1f, float speed = 1f)
