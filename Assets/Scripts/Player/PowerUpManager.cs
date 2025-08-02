@@ -9,6 +9,7 @@ public class PowerUpManager : MonoBehaviour{
     private Collider carCollider;
     private Transform carTransform;
     private Rigidbody carRig;
+    private CarController carController;
 
     // test basic abilities
     public string[] allAbilities = new string[]{
@@ -21,16 +22,38 @@ public class PowerUpManager : MonoBehaviour{
         carCollider = GetComponent<Collider>();
         carTransform = GetComponentInChildren<Transform>();
         carRig = GetComponent<Rigidbody>();
+        carController = GetComponent<CarController>();
 
         currentAbility = "";
     }
 
     public void SpawnPowerUps(){
         int offset = 4;
-        PowerUp powerUpMid = Instantiate(powerUpPrefab, carTransform.position + (carTransform.forward * offset), transform.rotation); // magic numbers :D
+        int currentIndex = 0;
+
+        for(int i = 0; i < carController.trackZones.Length; i++){
+            if(carController.trackZones[i] == carController.curTrackZone){
+                currentIndex = i;
+                break;
+            }
+        }
+
+        int spawnPoint = currentIndex + offset;
+        TrackZone spawnTrack = carController.trackZones[spawnPoint < carController.trackZones.Length? spawnPoint: offset]; // not that readable but chill
+
+        Transform trackTransform = spawnTrack.GetComponent<Transform>();
+
+        PowerUp powerUpMid = Instantiate(powerUpPrefab, trackTransform.position + new Vector3(0f, -1.5f, 0f), transform.rotation);
         powerUpMid.carID = carCollider.GetInstanceID();
         powerUpMid.type = allAbilities[Random.Range(0,allAbilities.Length)];
-        Debug.Log("Spawned");
+
+        PowerUp powerUpLeft = Instantiate(powerUpPrefab, trackTransform.position + new Vector3(-offset, -1.5f, 0f), transform.rotation);
+        powerUpLeft.carID = carCollider.GetInstanceID();
+        powerUpLeft.type = allAbilities[Random.Range(0,allAbilities.Length)];
+
+        PowerUp powerUpRight = Instantiate(powerUpPrefab, trackTransform.position + new Vector3(offset, -1.5f, 0f), transform.rotation);
+        powerUpRight.carID = carCollider.GetInstanceID();
+        powerUpRight.type = allAbilities[Random.Range(0,allAbilities.Length)];
     }
 
     public void jump(){
