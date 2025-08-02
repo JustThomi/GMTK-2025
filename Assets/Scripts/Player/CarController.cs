@@ -185,8 +185,8 @@ public class CarController : MonoBehaviour
         currentWaypoint = nodes[targetIndex];
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.DrawWireSphere(currentWaypoint.position, 3f);
-    }
+    // private void OnDrawGizmosSelected()
+    // {
+    //     Gizmos.DrawWireSphere(currentWaypoint.position, 3f);
+    // }
 }
