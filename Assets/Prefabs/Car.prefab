@@ -296,7 +296,7 @@ RectTransform:
   m_Father: {fileID: 6362299002208997554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 330601419072566500}
   - component: {fileID: 8560384202996903770}
   - component: {fileID: 713751066347902347}
-  - component: {fileID: 3158175312503043006}
+  - component: {fileID: 1136231896536089559}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -972,6 +972,7 @@ MonoBehaviour:
   carModel: {fileID: 281119383969695630}
   groundCheckRate: 0.05
   canControl: 0
+  trackZones: []
   curTrackZone: {fileID: 0}
   zonesPassed: 0
   racePosition: 0
@@ -1088,8 +1089,8 @@ MonoBehaviour:
     m_ActionName: 'Main/Brake[/Keyboard/downArrow,/Keyboard/s]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3158175312503043006}
-        m_TargetAssemblyTypeName: CarAbilities, Assembly-CSharp
+      - m_Target: {fileID: 1136231896536089559}
+        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
         m_MethodName: OnAbilityInput
         m_Mode: 0
         m_Arguments:
@@ -1102,22 +1103,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 307701b1-487f-481f-a3d1-48660885d38b
     m_ActionName: 'Main/UseAbility[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3158175312503043006}
-        m_TargetAssemblyTypeName: CarAbilities, Assembly-CSharp
-        m_MethodName: OnSwapAbilityInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 35071a5a-33ce-4f79-97aa-6b8c591556eb
-    m_ActionName: 'Main/SwapAbility[/Keyboard/alt]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -1135,6 +1120,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212d9e976d642c44f9e0821894df95cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLeveledUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1136231896536089559}
+        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
+        m_MethodName: SpawnPowerUps
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   UICanvas: {fileID: 8112511478946189752}
   referenceCamera: {fileID: 8180000261639970813}
   textFontSize: 55
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   currentLevel: 1
   currentXp: 0
   xpToLevelUp: 100
---- !u!114 &3158175312503043006
+--- !u!114 &1136231896536089559
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1154,10 +1154,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7160839672813676571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0197209107cade314a7d7516fd57b1f0, type: 3}
+  m_Script: {fileID: 11500000, guid: fba4cb2e3a0813101ad0fcf5472b9000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carModel: {fileID: 6348181050718991035}
+  powerUpPrefab: {fileID: 5385745549446875165, guid: d12044fc56230b552a4ccef76597ac01, type: 3}
 --- !u!1 &7204967667212145374
 GameObject:
   m_ObjectHideFlags: 0
