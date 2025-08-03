@@ -57,7 +57,7 @@ public class CarController : MonoBehaviour
         startModelOffset = carModel.transform.localPosition;
         GameManager.instance.cars.Add(this);
         rig.position = GameManager.instance.spawnPoints[GameManager.instance.cars.Count - 1].position;
-
+        
         agent = GetComponent<NavMeshAgent>();
         agent.updatePosition = false;
         agent.updateRotation = false;

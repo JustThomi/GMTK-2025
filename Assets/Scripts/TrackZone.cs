@@ -17,7 +17,7 @@ public class TrackZone : MonoBehaviour
             if(car.curLap == 0)
                 car.curLap++;
 
-            if (isGate && car.zonesPassed == car.trackZones.Length + 1)
+            if (isGate)// && car.zonesPassed == car.trackZones.Length + 1)
             {
                 car.zonesPassed = 1;
                 car.curLap++;
