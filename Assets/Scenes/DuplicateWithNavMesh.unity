@@ -10599,6 +10599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 7160839672813676571, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7281425798435393181, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.3
@@ -10641,7 +10645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8890297245149137187, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43310,6 +43314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777119047}
   - component: {fileID: 1777119048}
+  - component: {fileID: 1777119049}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -43358,6 +43363,24 @@ MonoBehaviour:
   carAI: {fileID: 7160839672813676571, guid: cd39b66e72f7acc469d443848db4a77d, type: 3}
   positionUpdateRate: 0.05
   gameStarted: 0
+--- !u!114 &1777119049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777119045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c446ffa5259fdb34996ee2c53f8e9b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefabs:
+  - {fileID: 7160839672813676571, guid: e0c9d2a5068bcc84ab9391723b3f4e1b, type: 3}
+  - {fileID: 7160839672813676571, guid: 4ecee839accbdf24eaf911163a88e60f, type: 3}
+  - {fileID: 7160839672813676571, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
+  - {fileID: 7160839672813676571, guid: 6d88c81f0e9811e44ae8a1d8b9213005, type: 3}
+  spawnPoint: {fileID: 635423063}
   playersToBegin: 4
   botsSpanwed: 0
 --- !u!1001 &1779180518

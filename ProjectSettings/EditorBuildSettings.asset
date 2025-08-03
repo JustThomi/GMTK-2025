@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 6e4cab598564d8b468e5bbccb81e1b91
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/CarSelection.unity
+    guid: f74f40a4197f40f40a4aab6e4a82dbd9
+  - enabled: 1
+    path: Assets/Scenes/DuplicateWithNavMesh.unity
+    guid: d21c120baddbc6e43935f114add86ba1
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
