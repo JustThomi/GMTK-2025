@@ -37,7 +37,7 @@ public class CarController : MonoBehaviour
 
     private bool accelerateInput;
     private bool reverseInput;
-    private float turnInput;
+    public float turnInput;
 
     public TrackZone[] trackZones;
     public TrackZone curTrackZone;
@@ -238,6 +238,9 @@ public class CarController : MonoBehaviour
         turnRate = Mathf.Abs(turnRate);
 
         curYRot += turnInput * turnSpeed * turnRate * Time.deltaTime;
+
+        Quaternion newRot = Quaternion.Euler(0f, curYRot, 0f);
+        rig.MoveRotation(newRot);
     }
 
     //private void CalculateDistanceOfWaypoints()
