@@ -296,7 +296,7 @@ RectTransform:
   m_Father: {fileID: 6362299002208997554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -449,7 +449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2499028842933150802
 RectTransform:
   m_ObjectHideFlags: 0
@@ -604,7 +604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9069612790670610227
 Transform:
   m_ObjectHideFlags: 0
@@ -636,6 +636,9 @@ MonoBehaviour:
   target: {fileID: 281119383969695630}
   followSpeed: 10
   rotateSpeed: 5
+  distance: 6
+  height: 2
+  pitchAngle: 10
 --- !u!1 &6731976463648576422
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +928,7 @@ GameObject:
   - component: {fileID: 8515586399949827942}
   m_Layer: 0
   m_Name: Car AI
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -972,6 +975,7 @@ MonoBehaviour:
   carModel: {fileID: 281119383969695630}
   groundCheckRate: 0.05
   canControl: 0
+  turnInput: 0
   trackZones: []
   curTrackZone: {fileID: 0}
   zonesPassed: 0
@@ -1089,21 +1093,13 @@ MonoBehaviour:
     m_ActionId: ed84a41f-5fa1-4126-8332-0b86429a2b48
     m_ActionName: 'Main/Brake[/Keyboard/downArrow,/Keyboard/s]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4492043182660883224}
-        m_TargetAssemblyTypeName: CarController, Assembly-CSharp
-        m_MethodName: OnReverseInput
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: aae59901-d222-4af2-9b0a-bf6310d518cc
-    m_ActionName: 'Main/Reverse[/Keyboard/s,/Keyboard/downArrow]'
+      m_Calls: []
+    m_ActionId: 307701b1-487f-481f-a3d1-48660885d38b
+    m_ActionName: 'Main/UseAbility[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c5b6ab7e-1fca-4357-a9a6-f778fd9193a7
+    m_ActionName: 'Main/PauseMenu[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -1121,6 +1117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212d9e976d642c44f9e0821894df95cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLeveledUp:
+    m_PersistentCalls:
+      m_Calls: []
   UICanvas: {fileID: 8112511478946189752}
   referenceCamera: {fileID: 8180000261639970813}
   textFontSize: 55

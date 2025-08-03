@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public Transform[] spawnPoints;
     public float lapsToFinish;
 
+    public GameObject carAI;
+
     public float positionUpdateRate = 0.05f;
     private float lastPositionUpdateTime;
 
@@ -16,11 +18,22 @@ public class GameManager : MonoBehaviour
 
     public int playersToBegin = 2;
 
+    public int botsSpanwed;
+
     public static GameManager instance;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        while (botsSpanwed < playersToBegin - 1)
+        {
+            Instantiate(carAI);
+            botsSpanwed++;
+        }
     }
 
     private void Update()

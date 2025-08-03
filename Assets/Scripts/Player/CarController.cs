@@ -70,6 +70,8 @@ public class CarController : MonoBehaviour
             .OrderBy(tz => tz.transform.GetSiblingIndex())
             .ToArray();
 
+        curTrackZone = trackZones[0];
+
         if (driverController == DriverType.AI && nodes.Count > 0)
         {
             currentTargetIndex = 0;
