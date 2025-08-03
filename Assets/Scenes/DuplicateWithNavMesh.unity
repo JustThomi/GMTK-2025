@@ -262,6 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &3633692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -426,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &10050450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1037,6 +1039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &23575597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1105,6 +1108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &28933740
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1173,6 +1177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &30702197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1567,6 +1572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &48556523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2341,6 +2347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &78642735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2825,6 +2832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &103724144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2893,6 +2901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &106690248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2961,6 +2970,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &106744436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3029,6 +3039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &107142422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3385,6 +3396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &131950069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3581,6 +3593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &134047283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3745,6 +3758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &140537887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3813,6 +3827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &141490973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3913,6 +3928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &144747291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4333,6 +4349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &156566057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5151,6 +5168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &197181413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5219,6 +5237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &203715598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5545,6 +5564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &206008063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5613,6 +5633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &209211475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5681,6 +5702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &209334811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5749,6 +5771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &221589247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5817,6 +5840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &226808275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6493,6 +6517,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &251401160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6657,6 +6682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &253440904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6725,6 +6751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &254084051
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6793,6 +6820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &254724797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7149,6 +7177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &275077582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7925,6 +7954,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &303073008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7993,6 +8023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &303230576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8253,6 +8284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &306549747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8609,6 +8641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &316235865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8677,6 +8710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &316419191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8841,6 +8875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &329538801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8909,6 +8944,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &334105093
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9073,6 +9109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &345018204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9333,6 +9370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &346746931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9497,6 +9535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &351565323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9949,6 +9988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &376946726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10017,6 +10057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &388025329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10374,6 +10415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &411196823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10595,6 +10637,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4492043182660883224, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
+      propertyPath: reverse
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4492043182660883224, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
+      propertyPath: acceleration
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 7160839672813676571, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_Name
       value: Car
@@ -10699,6 +10749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &423695157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11187,6 +11238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &452074579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11447,6 +11499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &481947500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11515,6 +11568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &484174170
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11583,6 +11637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &486182695
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11843,6 +11898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &498932801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12429,6 +12485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &524157223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13237,6 +13294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &546766761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13305,6 +13363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &557621231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13373,6 +13432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &558633650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13441,6 +13501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &565288787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13509,6 +13570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &565952520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13577,6 +13639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &571183550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13741,6 +13804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &573452020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13809,6 +13873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &575682083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14167,6 +14232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &587532763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14331,6 +14397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &593831176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14495,6 +14562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &597116876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15043,6 +15111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &632320233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15111,6 +15180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &634887611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15488,6 +15558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &638257470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15684,6 +15755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &643060573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15752,6 +15824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &648587394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16012,6 +16085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &656037546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16080,6 +16154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &663126047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16148,6 +16223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &666209856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16216,6 +16292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &666766836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16619,6 +16696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &680801206
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16879,6 +16957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &700742129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17047,6 +17126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &702189481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17115,6 +17195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &703015468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17729,6 +17810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &723590816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18053,6 +18135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &739444435
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18217,6 +18300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &742485858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18285,6 +18369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &744417866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18353,6 +18438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &749052676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18617,6 +18703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &752807390
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18781,6 +18868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &760289537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18881,6 +18969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &764148074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18949,6 +19038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &767788641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19017,6 +19107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &769114719
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19085,6 +19176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &774130931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19153,6 +19245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &780492273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19477,6 +19570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &799871326
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19993,6 +20087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &832889063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20573,6 +20668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &861262586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20833,6 +20929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &871557047
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21669,6 +21766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &903045783
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22025,6 +22123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &917595376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22093,6 +22192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &918206100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22161,6 +22261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &922049635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22229,6 +22330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &924118231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22297,6 +22399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &924601277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22561,6 +22664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &935340728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22821,6 +22925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &945667986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23841,6 +23946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &979740557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24489,6 +24595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1006631264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24557,6 +24664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1007982911
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24625,6 +24733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1009650907
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25049,6 +25158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1020010837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25537,6 +25647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1050731177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26101,6 +26212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1079836889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26169,6 +26281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1080142690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27263,6 +27376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1121630052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27331,6 +27445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1123429116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27887,6 +28002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1142900834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28051,6 +28167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1145034087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28215,6 +28332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1148586227
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28571,6 +28689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1161393986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28660,6 +28779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 1
   xpToAdd: 100
+  min: 170
 --- !u!1 &1169723454 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ba32caeb24f2ccf4689a6fffc7937f58, type: 3}
@@ -28739,6 +28859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1174021959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28807,6 +28928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1177852983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28971,6 +29093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1183098549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29039,6 +29162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1183443243
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29171,6 +29295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1186517793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29431,6 +29556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1201728288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30754,6 +30880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1272188748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31201,6 +31328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1283040971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31269,6 +31397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1283078576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31629,6 +31758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1307842278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31697,6 +31827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1308852646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31797,6 +31928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1314693554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31961,6 +32093,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1324124489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32413,6 +32546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1336884300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32481,6 +32615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1340008030
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32841,6 +32976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1384489207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32909,6 +33045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1387124701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32977,6 +33114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1391205891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33045,6 +33183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1393207461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33479,6 +33618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1430455386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33771,6 +33911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1453484588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34021,6 +34162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1456350612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34089,6 +34231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1456546820
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34189,6 +34332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1463855691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34385,6 +34529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1476083585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35417,6 +35562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1505926965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35585,6 +35731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1511407568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35653,6 +35800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1518827636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35821,6 +35969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1523734660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35985,6 +36134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1530391728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36053,6 +36203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1547781745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37842,6 +37993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1581324610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37942,6 +38094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1587510502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38298,6 +38451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1598637207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38462,6 +38616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1601863582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38530,6 +38685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1607568870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38694,6 +38850,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1609619124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38826,6 +38983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1613663816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38990,6 +39148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1621179140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39154,6 +39313,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1628856136
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39318,6 +39478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1636095306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40030,6 +40191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1661282533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40098,6 +40260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1662938532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40586,6 +40749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1684850947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40654,6 +40818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1686449444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41440,6 +41605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1708976384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41508,6 +41674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1709330096
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42551,6 +42718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1756218734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42619,6 +42787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1757175818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42787,6 +42956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1761210212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42855,6 +43025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1763647539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43119,6 +43290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1773320109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43187,6 +43359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1773849553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43361,7 +43534,7 @@ MonoBehaviour:
   - {fileID: 1236977053}
   lapsToFinish: 35
   carAI: {fileID: 7160839672813676571, guid: cd39b66e72f7acc469d443848db4a77d, type: 3}
-  positionUpdateRate: 0.05
+  positionUpdateRate: 0.5
   gameStarted: 0
 --- !u!114 &1777119049
 MonoBehaviour:
@@ -43814,6 +43987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1793398338
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44266,6 +44440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1804890164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44493,6 +44668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1826451012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44561,6 +44737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1830363738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44985,6 +45162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1842909673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45149,6 +45327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1853493124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45889,6 +46068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1894469996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46349,6 +46529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1920124125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46417,6 +46598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1925729178
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46549,6 +46731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1935967593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46617,6 +46800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1944928134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47073,6 +47257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1960119052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47429,6 +47614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1965447515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47625,6 +47811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1975967528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47949,6 +48136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &1984125241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48337,6 +48525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2010667065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48405,6 +48594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2024495677
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48473,6 +48663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2030565272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48737,6 +48928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2034607162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48805,6 +48997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2041566443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48873,6 +49066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2049913594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49037,6 +49231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2055336656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49521,6 +49716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2087002119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49751,6 +49947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2100853049
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50173,6 +50370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2110759531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50241,6 +50439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2111395181
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50473,6 +50672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2116284398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50619,6 +50819,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2120962003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50751,6 +50952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2121066127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50915,6 +51117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGate: 0
   xpToAdd: 0
+  min: 0
 --- !u!65 &2128493604
 BoxCollider:
   m_ObjectHideFlags: 0

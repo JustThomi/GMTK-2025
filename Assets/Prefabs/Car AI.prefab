@@ -928,7 +928,7 @@ GameObject:
   - component: {fileID: 8515586399949827942}
   m_Layer: 0
   m_Name: Car AI
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -980,6 +980,8 @@ MonoBehaviour:
   curTrackZone: {fileID: 0}
   zonesPassed: 0
   racePosition: 0
+  oldRacePosition: 0
+  xpToAddForPosition: 0
   curLap: 0
   rig: {fileID: 660258774967287237}
   raceCheckpoints: []
@@ -1140,7 +1142,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 1.5
-  m_Speed: 35
+  m_Speed: 47
   m_Acceleration: 8
   avoidancePriority: 99
   m_AngularSpeed: 350

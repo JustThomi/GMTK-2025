@@ -22,9 +22,14 @@ public class PlayerLevelManager : MonoBehaviour
     public int currentXp;
     public int xpToLevelUp;
 
+    public int xpToAddPeriodically;
+    public float timeBetweenExp;
+
     void Start()
     {
         cc = GetComponent<CarController>();
+
+        StartCoroutine(AddExpPeriodically());
     }
 
     void Update()
@@ -54,7 +59,7 @@ public class PlayerLevelManager : MonoBehaviour
     {
         Debug.Log("Yeppy");
         currentLevel++;
-        cc.acceleration += 10;
+        cc.acceleration += 3;
         hasLeveledUp.Invoke();
     }
 
@@ -72,6 +77,17 @@ public class PlayerLevelManager : MonoBehaviour
 
         StartCoroutine(GenerateFloatingTextCoroutine(text, target, duration, speed));
     }
+
+    private IEnumerator AddExpPeriodically()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(timeBetweenExp);
+
+            AddXp(xpToAddPeriodically);
+        }
+    }
+
     private IEnumerator GenerateFloatingTextCoroutine(string text, Transform target, float duration = 1f, float speed = 1f)
     {
         GameObject textObj = new GameObject("XP Floating Text");
