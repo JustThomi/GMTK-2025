@@ -36,7 +36,7 @@ public class PlayerLevelManager : MonoBehaviour
     {
         currentXp += amount;
 
-        GenerateFloatingText(amount.ToString() + "XP", transform);
+        GenerateFloatingText("+" + amount.ToString() + "XP", transform);
 
         while (currentXp >= xpToLevelUp)
         {
