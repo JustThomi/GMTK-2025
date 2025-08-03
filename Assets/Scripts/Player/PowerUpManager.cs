@@ -6,6 +6,7 @@ public class PowerUpManager : MonoBehaviour{
     public PowerUp powerUpPrefab;
     public LayerMask groundLayer;
 
+    public GameObject carModel;
     private Collider carCollider;
     private Transform carTransform;
     private Rigidbody carRig;
@@ -20,7 +21,7 @@ public class PowerUpManager : MonoBehaviour{
 
     void Start(){
         carCollider = GetComponent<Collider>();
-        carTransform = GetComponentInChildren<Transform>();
+        carTransform = carModel.GetComponent<Transform>();
         carRig = GetComponent<Rigidbody>();
         carController = GetComponent<CarController>();
 
