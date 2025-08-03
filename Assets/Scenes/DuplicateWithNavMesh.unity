@@ -10645,6 +10645,10 @@ PrefabInstance:
       propertyPath: acceleration
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6348181050718991035, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7160839672813676571, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
       propertyPath: m_Name
       value: Car
@@ -43536,6 +43540,8 @@ MonoBehaviour:
   carAI: {fileID: 7160839672813676571, guid: cd39b66e72f7acc469d443848db4a77d, type: 3}
   positionUpdateRate: 0.5
   gameStarted: 0
+  playersToBegin: 3
+  botsSpanwed: 0
 --- !u!114 &1777119049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43554,8 +43560,6 @@ MonoBehaviour:
   - {fileID: 7160839672813676571, guid: f4340647e6992ba4eb0bb54772c94099, type: 3}
   - {fileID: 7160839672813676571, guid: 6d88c81f0e9811e44ae8a1d8b9213005, type: 3}
   spawnPoint: {fileID: 635423063}
-  playersToBegin: 4
-  botsSpanwed: 0
 --- !u!1001 &1779180518
 PrefabInstance:
   m_ObjectHideFlags: 0
