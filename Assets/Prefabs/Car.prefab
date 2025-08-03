@@ -635,7 +635,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 281119383969695630}
   followSpeed: 10
-  rotateSpeed: 5
+  rotateSpeed: 10
+  distance: 6
+  height: 2
+  pitchAngle: 15
 --- !u!1 &6731976463648576422
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +706,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 8/10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74fcae1a10c94cf46b82ef518e391026, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -769,7 +772,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6755959568913853778
@@ -967,7 +970,7 @@ MonoBehaviour:
   distanceOffset: 0
   steerForce: 0
   waypointCheckDistance: 12
-  acceleration: 50
+  acceleration: 55
   turnSpeed: 100
   carModel: {fileID: 281119383969695630}
   groundCheckRate: 0.05
