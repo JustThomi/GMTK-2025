@@ -635,10 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 281119383969695630}
   followSpeed: 10
-  rotateSpeed: 10
-  distance: 6
-  height: 2
-  pitchAngle: 15
+  rotateSpeed: 5
 --- !u!1 &6731976463648576422
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +703,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 8/10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 74fcae1a10c94cf46b82ef518e391026, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -772,7 +769,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6755959568913853778
@@ -925,9 +922,9 @@ GameObject:
   - component: {fileID: 330601419072566500}
   - component: {fileID: 8560384202996903770}
   - component: {fileID: 713751066347902347}
-  - component: {fileID: 1136231896536089559}
+  - component: {fileID: 8515586399949827942}
   m_Layer: 0
-  m_Name: Car
+  m_Name: Car AI
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -963,14 +960,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0115dcd0e373964ca54a24b93ec9b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  driverController: 1
+  driverController: 0
   waypoints: {fileID: 0}
   nodes: []
   currentWaypoint: {fileID: 0}
-  distanceOffset: 0
-  steerForce: 0
-  waypointCheckDistance: 12
-  acceleration: 55
+  steerForce: 6
+  waypointCheckDistance: 10
+  acceleration: 45
+  reverse: 25
   turnSpeed: 100
   carModel: {fileID: 281119383969695630}
   groundCheckRate: 0.05
@@ -981,8 +978,7 @@ MonoBehaviour:
   racePosition: 0
   curLap: 0
   rig: {fileID: 660258774967287237}
-  stuckDetectionDelay: 5
-  reverseDuration: 1.2
+  raceCheckpoints: []
 --- !u!54 &660258774967287237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1009,7 +1005,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &330601419072566500
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1094,9 +1090,9 @@ MonoBehaviour:
     m_ActionName: 'Main/Brake[/Keyboard/downArrow,/Keyboard/s]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1136231896536089559}
-        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
-        m_MethodName: OnAbilityInput
+      - m_Target: {fileID: 4492043182660883224}
+        m_TargetAssemblyTypeName: CarController, Assembly-CSharp
+        m_MethodName: OnReverseInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1106,8 +1102,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 307701b1-487f-481f-a3d1-48660885d38b
-    m_ActionName: 'Main/UseAbility[/Keyboard/space]'
+    m_ActionId: aae59901-d222-4af2-9b0a-bf6310d518cc
+    m_ActionName: 'Main/Reverse[/Keyboard/s,/Keyboard/downArrow]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -1125,21 +1121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212d9e976d642c44f9e0821894df95cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasLeveledUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1136231896536089559}
-        m_TargetAssemblyTypeName: PowerUpManager, Assembly-CSharp
-        m_MethodName: SpawnPowerUps
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   UICanvas: {fileID: 8112511478946189752}
   referenceCamera: {fileID: 8180000261639970813}
   textFontSize: 55
@@ -1150,25 +1131,28 @@ MonoBehaviour:
   currentLevel: 1
   currentXp: 0
   xpToLevelUp: 100
---- !u!114 &1136231896536089559
-MonoBehaviour:
+--- !u!195 &8515586399949827942
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7160839672813676571}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fba4cb2e3a0813101ad0fcf5472b9000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpPrefab: {fileID: 5385745549446875165, guid: d12044fc56230b552a4ccef76597ac01, type: 3}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  allAbilities:
-  - jump
-  - boost
+  m_AgentTypeID: -1372625422
+  m_Radius: 1.5
+  m_Speed: 35
+  m_Acceleration: 8
+  avoidancePriority: 99
+  m_AngularSpeed: 350
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 1.25
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7204967667212145374
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 50, y: 70}
+  m_AnchoredPosition: {x: 12, y: 70}
   m_SizeDelta: {x: 323.69, y: 61.73}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &2347148020890935404
