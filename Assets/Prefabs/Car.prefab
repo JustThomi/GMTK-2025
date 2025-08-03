@@ -1170,6 +1170,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  carModel: {fileID: 6348181050718991035}
   allAbilities:
   - jump
   - boost

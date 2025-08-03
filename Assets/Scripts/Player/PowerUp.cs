@@ -6,10 +6,9 @@ public class PowerUp : MonoBehaviour{
     public string type {set;get;}
 
     private void OnTriggerEnter(Collider other){
-        GameObject car = other.gameObject;
-        PowerUpManager powerUpManager = car.GetComponent<PowerUpManager>();
-
         if (carID == other.GetInstanceID()){
+            GameObject car = other.gameObject;
+            PowerUpManager powerUpManager = car.GetComponent<PowerUpManager>();
             powerUpManager.currentAbility = type;
 
             Destroy(gameObject);
