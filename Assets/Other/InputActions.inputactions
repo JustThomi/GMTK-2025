@@ -25,7 +25,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Brake",
+                    "name": "Reverse",
                     "type": "Button",
                     "id": "ed84a41f-5fa1-4126-8332-0b86429a2b48",
                     "expectedControlType": "",
@@ -170,7 +170,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard",
-                    "action": "Brake",
+                    "action": "Reverse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -181,7 +181,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard",
-                    "action": "Brake",
+                    "action": "Reverse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -192,7 +192,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Controller",
-                    "action": "Brake",
+                    "action": "Reverse",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

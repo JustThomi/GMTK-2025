@@ -74,27 +74,29 @@ public class GameManager : MonoBehaviour
     {
         cars.Sort(SortPosition);
 
-        for(int x = 0; x < cars.Count; x++)
+        for (int x = 0; x < cars.Count; x++)
         {
-            cars[x].racePosition = cars.Count - x;
+            cars[x].racePosition = x + 1;
         }
     }
 
-    int SortPosition (CarController a, CarController b)
+    int SortPosition(CarController a, CarController b)
     {
-        if (a.curLap > b.curLap)
-            return 1;
-        else if(b.curLap > a.curLap)
-            return -1;
-        else if (a.zonesPassed > b.zonesPassed)
-            return 1;
-        else if (b.zonesPassed > a.zonesPassed)
-            return -1;
+        if (a.curLap > b.curLap) return -1;
+        if (a.curLap < b.curLap) return 1;
+
+        if (a.zonesPassed > b.zonesPassed) return -1;
+        if (a.zonesPassed < b.zonesPassed) return 1;
 
         float aDist = Vector3.Distance(a.transform.position, a.curTrackZone.transform.position);
         float bDist = Vector3.Distance(b.transform.position, b.curTrackZone.transform.position);
 
-        return aDist > bDist ? -1 : 1;
-    }
+        const float tolerance = 0.3f;
+        float diff = aDist - bDist;
 
+        if (Mathf.Abs(diff) < tolerance)
+            return 0;
+
+        return diff < 0 ? -1 : 1;
+    }
 }

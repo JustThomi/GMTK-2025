@@ -13,7 +13,7 @@ public class CarController : MonoBehaviour
     }
 
     [SerializeField]
-    private DriverType driverController;
+    internal DriverType driverController;
     [Header("AI Drive")]
     public TrackWaypoints waypoints;
     public List<Transform> nodes = new List<Transform>();
@@ -43,6 +43,8 @@ public class CarController : MonoBehaviour
     public TrackZone curTrackZone;
     public int zonesPassed;
     public int racePosition;
+    public int oldRacePosition;
+    public int xpToAddForPosition;
     public int curLap;
 
     public Rigidbody rig;
@@ -51,6 +53,8 @@ public class CarController : MonoBehaviour
     public List<Transform> raceCheckpoints = new List<Transform>();
 
     private int currentTargetIndex = 0;
+
+    public bool isPlayer;
 
     private void Start()
     {
@@ -136,7 +140,7 @@ public class CarController : MonoBehaviour
         Ray ray = new Ray(transform.position + Vector3.up * 0.5f, Vector3.down);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 1.5f))
+        if (Physics.Raycast(ray, out hit, 3f))
         {
             carModel.up = Vector3.Lerp(carModel.up, hit.normal, 10f * Time.deltaTime);
         }
@@ -229,6 +233,7 @@ public class CarController : MonoBehaviour
         }
         else if(reverseInput == true)
         {
+            reverse = acceleration * 0.75f;
             rig.AddForce(carModel.forward * -reverse, ForceMode.Acceleration);
         }
     }

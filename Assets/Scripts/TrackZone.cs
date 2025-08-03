@@ -6,6 +6,9 @@ public class TrackZone : MonoBehaviour
     public bool isGate;
 
     public int xpToAdd;
+
+    public int min;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -17,7 +20,7 @@ public class TrackZone : MonoBehaviour
             if(car.curLap == 0)
                 car.curLap++;
 
-            if (isGate)// && car.zonesPassed == car.trackZones.Length + 1)
+            if (isGate && car.zonesPassed >= min)
             {
                 car.zonesPassed = 1;
                 car.curLap++;
