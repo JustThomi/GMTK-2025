@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-
 public class PowerUpManager : MonoBehaviour{
     public PowerUp powerUpPrefab;
+    public Wall wallPrefab;
     public LayerMask groundLayer;
 
     public GameObject carModel;
@@ -16,6 +16,7 @@ public class PowerUpManager : MonoBehaviour{
     public string[] allAbilities = new string[]{
         "jump",
         "boost",
+        "wall",
     };
     public string currentAbility {set;get;}
 
@@ -71,6 +72,22 @@ public class PowerUpManager : MonoBehaviour{
         carRig.AddForce(carTransform.forward * speed, ForceMode.Impulse);
     }
     
+    public void spawnWall(){
+        int currentIndex = 0;
+
+        for(int i = 0; i < carController.trackZones.Length; i++){
+            if(carController.trackZones[i] == carController.curTrackZone){
+                currentIndex = i;
+                break;
+            }
+        }
+        // known edge case..oh well :D
+        int spawnPoint = Mathf.Max(currentIndex - 1, 0);
+        Transform trackTransform = carController.trackZones[spawnPoint].GetComponent<Transform>();
+
+        Wall wallInstance = Instantiate(wallPrefab, trackTransform.position, trackTransform.rotation);
+    }
+
     public void OnAbilityInput(InputAction.CallbackContext context){
         Debug.Log("current ability: " + currentAbility);
         if (context.started){
@@ -81,11 +98,14 @@ public class PowerUpManager : MonoBehaviour{
                 case "boost":
                     boost();
                     break;
+                case "wall":
+                    spawnWall();
+                    break;
                 default:
                     Debug.Log("Skill issue");
                     break;
             }
-            currentAbility = ""; // one time use
+            currentAbility = "";
         }
     }
 }
