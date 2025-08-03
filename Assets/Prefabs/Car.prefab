@@ -977,6 +977,7 @@ MonoBehaviour:
   carModel: {fileID: 281119383969695630}
   groundCheckRate: 0.05
   canControl: 0
+  turnInput: 0
   trackZones: []
   curTrackZone: {fileID: 0}
   zonesPassed: 0
@@ -1168,6 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpPrefab: {fileID: 5385745549446875165, guid: d12044fc56230b552a4ccef76597ac01, type: 3}
+  wallPrefab: {fileID: 3734787204582728586, guid: f4ed260595d497e84be91ed2b368ef1c, type: 3}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
